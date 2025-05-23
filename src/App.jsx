@@ -1,11 +1,16 @@
 import "./App.css";
 import profileImage from "./assets/profile-image.jpg";
+import headerBackground from "./assets/IMG_1396.jpg";
 
 function App() {
   return (
     <div className="container">
       <div className="header">
-        <div className="background"></div>
+        <div
+          className="background"
+          style={{ backgroundImage: `url(${headerBackground})` }}
+        ></div>
+
         <img src={profileImage} alt="Profile" className="profile-img" />
       </div>
 
