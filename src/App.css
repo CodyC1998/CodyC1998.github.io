@@ -1,3 +1,32 @@
+/* Theme Variables */
+:root {
+  --bg-body: #f4f7fc;
+  --bg-container: #ffffff;
+  --text-main: #333;
+  --text-header: #141414;
+  --text-subtle: #636363;
+  --card-bg: #1e1e1e;
+  --card-content-bg: #b8b8b8;
+  --footer-bg: #333;
+  --footer-text: #fff;
+  --footer-link: #04d9ff;
+  --footer-link-hover: #039cb3;
+}
+
+[data-theme="dark"] {
+  --bg-body: #121212;
+  --bg-container: #1e1e1e;
+  --text-main: #e0e0e0;
+  --text-header: #ffffff;
+  --text-subtle: #bbbbbb;
+  --card-bg: #2a2a2a;
+  --card-content-bg: #444;
+  --footer-bg: #000;
+  --footer-text: #ccc;
+  --footer-link: #04d9ff;
+  --footer-link-hover: #039cb3;
+}
+
 /* General */
 * {
   margin: 0;
@@ -8,19 +37,18 @@
 
 /* Body */
 body {
-  background-color: #f4f7fc; 
-  color: #333; 
+  background-color: var(--bg-body);
+  color: var(--text-main);
   display: flex;
   justify-content: center;
   font-size: 16px;
 }
 
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 30px;
-  background-color: #ffffff; 
+  background-color: var(--bg-container);
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
@@ -28,7 +56,7 @@ body {
 /* Header */
 .header {
   position: relative;
-  background-color: #222; 
+  background-color: #222;
   height: 250px;
   display: flex;
   justify-content: center;
@@ -40,27 +68,27 @@ body {
   background: url('./assets/IMG_1396.jpg') no-repeat center/cover;
   width: 100%;
   height: 100%;
-  filter: brightness(0.6); 
+  filter: brightness(0.6);
 }
 
 .profile-img {
   width: 140px;
   height: 140px;
   border-radius: 50%;
-  border: 5px solid #fff; 
+  border: 5px solid #fff;
   position: absolute;
-  bottom: -70px; 
+  bottom: -70px;
   left: 50%;
   transform: translateX(-50%);
   background-color: #fff;
   z-index: 2;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  object-fit: cover; 
+  object-fit: cover;
 }
 
 .header-content {
   margin-top: 80px;
-  color: #141414;
+  color: var(--text-header);
   text-align: center;
 }
 
@@ -72,15 +100,14 @@ body {
 
 .header-content p {
   font-size: 1.1rem;
-  color: #636363;
+  color: var(--text-subtle);
 }
-
 
 /* Main Content */
 .content {
   margin-top: 30px;
   text-align: center;
-  color: #444;
+  color: var(--text-main);
 }
 
 .content p {
@@ -88,7 +115,7 @@ body {
   max-width: 850px;
   margin: 0 auto;
   font-size: 1.2rem;
-  color: #666;
+  color: var(--text-subtle);
 }
 
 /* Projects Section */
@@ -100,7 +127,7 @@ body {
 .projects h2 {
   font-size: 2.5rem;
   margin-bottom: 30px;
-  color: #333;
+  color: var(--text-main);
   font-weight: 700;
 }
 
@@ -109,11 +136,10 @@ body {
   justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
-  
 }
 
 .card {
-  background-color: #1e1e1e; 
+  background-color: var(--card-bg);
   padding: 25px;
   border-radius: 15px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
@@ -130,14 +156,14 @@ body {
 
 .card-content {
   height: 200px;
-  background-color: #b8b8b8;
+  background-color: var(--card-content-bg);
   border-radius: 10px;
   margin-bottom: 20px;
   align-content: center;
 }
 
 button {
-  background-color: #04d9ff; 
+  background-color: var(--footer-link);
   color: #fff;
   padding: 12px 18px;
   border: none;
@@ -148,17 +174,17 @@ button {
 }
 
 button:hover {
-  background-color: #039cb3; 
+  background-color: var(--footer-link-hover);
 }
 
 /* Footer */
 .footer {
-  background-color: #333; 
-  color: #fff;
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
   padding: 40px 20px;
   text-align: center;
   margin-top: 60px;
-  border-radius: 10px; 
+  border-radius: 10px;
 }
 
 .footer h3 {
@@ -170,18 +196,18 @@ button:hover {
 .footer p {
   font-size: 1rem;
   margin-bottom: 20px;
-  color: #bbb; 
+  color: var(--text-subtle);
 }
 
 .footer a {
   text-decoration: none;
-  color: #04d9ff; 
+  color: var(--footer-link);
   transition: color 0.3s ease;
   font-weight: 500;
 }
 
 .footer a:hover {
-  color: #039cb3; 
+  color: var(--footer-link-hover);
 }
 
 .footer .social-icons {
@@ -195,7 +221,7 @@ button:hover {
 }
 
 .footer .social-icons a:hover {
-  transform: translateY(-5px); 
+  transform: translateY(-5px);
 }
 
 .social-icons a {
@@ -206,6 +232,6 @@ button:hover {
 }
 
 .social-icons a:hover {
-  color: #04d9ff; 
-  transform: translateY(-5px); 
+  color: var(--footer-link);
+  transform: translateY(-5px);
 }

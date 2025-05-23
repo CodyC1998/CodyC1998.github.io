@@ -1,8 +1,22 @@
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import profileImage from "./assets/profile-image.jpg";
 import headerBackground from "./assets/IMG_1396.jpg";
 
 function App() {
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem("theme") || "light";
+  });
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === "light" ? "dark" : "light"));
+  };
+
   return (
     <div className="container">
       <div className="header">
@@ -17,6 +31,9 @@ function App() {
       <div className="header-content">
         <h1>Cody Collins</h1>
         <p>Software Developer</p>
+        <button onClick={toggleTheme} style={{ marginTop: "1rem" }}>
+          Switch to {theme === "light" ? "Dark" : "Light"} Mode
+        </button>
       </div>
 
       <div className="content">
@@ -46,6 +63,7 @@ function App() {
           ))}
         </div>
       </div>
+
       <footer className="footer">
         <h3>Get in Touch</h3>
         <p>
