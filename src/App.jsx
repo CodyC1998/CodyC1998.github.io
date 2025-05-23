@@ -25,15 +25,23 @@ function App() {
           style={{ backgroundImage: `url(${headerBackground})` }}
         ></div>
 
+        <div className="theme-toggle">
+          <label className="switch">
+            <input
+              type="checkbox"
+              onChange={toggleTheme}
+              checked={theme === "dark"}
+            />
+            <span className="slider"></span>
+          </label>
+        </div>
+
         <img src={profileImage} alt="Profile" className="profile-img" />
       </div>
 
       <div className="header-content">
         <h1>Cody Collins</h1>
         <p>Software Developer</p>
-        <button onClick={toggleTheme} style={{ marginTop: "1rem" }}>
-          Switch to {theme === "light" ? "Dark" : "Light"} Mode
-        </button>
       </div>
 
       <div className="content">
