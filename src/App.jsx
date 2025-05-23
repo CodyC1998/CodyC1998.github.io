@@ -22,7 +22,7 @@ function App() {
           like Python, HTML, CSS, JavaScript, React, and Vite. With a keen eye
           for detail and a background in UI/UX design and Figma, I strive to
           create seamless digital experiences that merge functionality with
-          aesthetics. I’m eager to collaborate, learn, and bring ideas to life.
+          aesthetics. I'm eager to collaborate, learn, and bring ideas to life.
         </p>
       </div>
 
